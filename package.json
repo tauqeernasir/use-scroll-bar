@@ -6,7 +6,7 @@
   "repository": "https://github.com/jskod/use-scroll-bar.git",
   "author": "Tauqeer Nasir <tauqeer.insta@gmail.com>",
   "license": "MIT",
-	"files": ["lib/**/*"],
+	"files": ["lib/**"],
   "scripts": {
 		"test": "echo \"No test files found.\" && exit 0",
     "semantic-release": "semantic-release",
