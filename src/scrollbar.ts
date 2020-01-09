@@ -19,9 +19,11 @@ export function scrollbar() {
 		scrollX: 0
 	})
 
+	const isSSR: boolean = typeof window === 'undefined'
+
 	// cache last horizontal and vertical scroll positions
-	let lastScrollX = window.scrollX
-	let lastScrollY = window.scrollY
+	let lastScrollX = isSSR ? 0 : window.scrollX
+	let lastScrollY = isSSR ? 0 : window.scrollY
 
 	const handler = () => {
 		const newScrollY = window.scrollY
@@ -61,7 +63,7 @@ export function scrollbar() {
 	}
 
 	useEffect(() => {
-		if (typeof window !== 'undefined') {
+		if (!isSSR) {
 			window.addEventListener('scroll', handler)
 			return () => {
 				window.removeEventListener('scroll', handler)
