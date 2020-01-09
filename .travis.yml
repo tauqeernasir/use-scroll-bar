@@ -16,5 +16,6 @@ jobs:
     - stage: deploy
       if: branch == master && !fork
       node_js: 'node' # pre-installed version
-      script:
+			script:
+				- npm run build
         - npm run semantic-release
