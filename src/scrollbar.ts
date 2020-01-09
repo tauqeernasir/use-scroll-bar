@@ -24,7 +24,6 @@ export function scrollbar() {
 	let lastScrollY = window.scrollY
 
 	const handler = () => {
-		console.log('hanlder function')
 		const newScrollY = window.scrollY
 		const newScrollX = window.scrollX
 		// check if new horizontal position is greater than cached position
@@ -62,12 +61,13 @@ export function scrollbar() {
 	}
 
 	useEffect(() => {
-		window.addEventListener('scroll', handler)
-
-		return () => {
-			window.removeEventListener('scroll', handler)
+		if (typeof window !== 'undefined') {
+			window.addEventListener('scroll', handler)
+			return () => {
+				window.removeEventListener('scroll', handler)
+			}
 		}
+		return undefined
 	}, [])
-	console.log('data = ', data)
 	return data
 }
