@@ -8,6 +8,7 @@
   "license": "MIT",
 	"files": ["lib/**/*"],
   "scripts": {
+		"test": "echo \"No test files found.\" && exit 0",
     "semantic-release": "semantic-release",
     "commit": "git-cz",
     "build": "tsc"

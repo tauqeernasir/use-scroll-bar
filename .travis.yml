@@ -7,7 +7,7 @@ cache: npm
 install:
   - npm install
 script:
-  - npm run tes
+  - npm run test
 branches:
   except:
     - '/^v\d+\.\d+\.\d+$/'
