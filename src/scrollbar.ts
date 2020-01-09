@@ -7,6 +7,9 @@ interface IScrollbarState {
 	scrollY: number
 }
 
+/**
+ * scrollbar hook
+ */
 export function scrollbar() {
 
 	const [data, setData] = useState<IScrollbarState>({
@@ -16,6 +19,7 @@ export function scrollbar() {
 		scrollX: 0
 	})
 
+	// cache last horizontal and vertical scroll positions
 	let lastScrollX = window.scrollX
 	let lastScrollY = window.scrollY
 
@@ -23,6 +27,7 @@ export function scrollbar() {
 		console.log('hanlder function')
 		const newScrollY = window.scrollY
 		const newScrollX = window.scrollX
+		// check if new horizontal position is greater than cached position
 		if (newScrollX > lastScrollX) {
 			setData({
 				...data,
@@ -37,6 +42,7 @@ export function scrollbar() {
 			})
 		}
 
+		// check if new vertical position is greater than cached position
 		if (newScrollY > lastScrollY) {
 			setData({
 				...data,
