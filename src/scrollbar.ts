@@ -68,6 +68,6 @@ export function scrollbar() {
 			window.removeEventListener('scroll', handler)
 		}
 	}, [])
-
+	console.log('data = ', data)
 	return data
 }
