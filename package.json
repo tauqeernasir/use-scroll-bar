@@ -1,0 +1,23 @@
+{
+  "name": "use-scroll-bar",
+  "version": "0.0.0-development",
+  "description": "Get information of window scrollbar like current position and direction of last scroll.",
+  "main": "index.js",
+  "repository": "https://github.com/jskod/use-scroll-bar.git",
+  "author": "Tauqeer Nasir <tauqeer.insta@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+		"semantic-release": "semantic-release",
+		"commit": "git-cz"
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "semantic-release": "^15.14.0"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
+}
