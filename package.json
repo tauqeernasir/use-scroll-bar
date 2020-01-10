@@ -6,21 +6,29 @@
   "repository": "https://github.com/jskod/use-scroll-bar.git",
   "author": "Tauqeer Nasir <tauqeer.insta@gmail.com>",
   "license": "MIT",
-	"files": ["lib/**"],
+  "files": [
+    "lib/**"
+  ],
   "scripts": {
-		"test": "echo \"No test files found.\" && exit 0",
+    "test": "echo \"No test files found.\" && exit 0",
     "semantic-release": "semantic-release",
     "commit": "git-cz",
-    "build": "tsc"
+		"build": "webpack --mode development",
+		"build:prod": "webpack --mode production"
   },
   "devDependencies": {
     "@types/react": "^16.9.17",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "semantic-release": "^15.14.0",
-    "typescript": "^3.7.4"
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   },
   "peerDependencies": {
     "react": "*",
